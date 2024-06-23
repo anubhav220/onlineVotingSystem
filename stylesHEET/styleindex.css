@@ -1,0 +1,203 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.shape {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.shape1 {
+    width: 150px;
+    height: 150px;
+    top: -50px;
+    left: -50px;
+}
+
+.shape2 {
+    width: 100px;
+    height: 100px;
+    bottom: -50px;
+    right: -50px;
+}
+
+.shape3 {
+    width: 75px;
+    height: 75px;
+    top: 50px;
+    right: -25px;
+}
+
+.shape4 {
+    width: 200px;
+    height: 200px;
+    bottom: -100px;
+    left: -100px;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#bodySection {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    box-sizing: border-box;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#bodySection:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+#bodySection h3 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+#bodySection input[type="number"],
+#bodySection input[type="password"],
+#bodySection select,
+#bodySection button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#bodySection input[type="number"]:focus,
+#bodySection input[type="password"]:focus,
+#bodySection select:focus,
+#bodySection button:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#bodySection button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#bodySection button:hover {
+    background-color: #0056b3;
+}
+
+#bodySection a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#bodySection a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    
+    #bodySection {
+        padding: 20px;
+        width: 100%;
+    }
+    
+    #header h1 {
+        font-size: 2rem;
+    }
+    
+    #bodySection h3 {
+        font-size: 1.25rem;
+    }
+    
+    #bodySection input[type="number"],
+    #bodySection input[type="password"],
+    #bodySection select,
+    #bodySection button {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    #bodySection button {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #header h1 {
+        font-size: 1.5rem;
+    }
+    
+    #bodySection h3 {
+        font-size: 1rem;
+    }
+    
+    #bodySection input[type="number"],
+    #bodySection input[type="password"],
+    #bodySection select,
+    #bodySection button {
+        padding: 8px;
+        font-size: 12px;
+    }
+    
+    #bodySection button {
+        font-size: 0.75rem;
+    }
+}

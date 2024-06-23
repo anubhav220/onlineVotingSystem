@@ -1,0 +1,55 @@
+body{
+    text-align: center;
+    background-color: azure;
+}
+#header h1{
+    padding: 10px;
+    font-family: cursive;
+    font-size: 50px;
+}
+
+#bodySection h3{
+    font-size: 40px;
+}
+
+input{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#droupBOX{
+    padding: 8px;
+    font-size: 15px;
+    border-radius: 5px;
+    color: blue;
+    width: 15.5%;
+}
+
+#button{
+    color: aliceblue;
+    background-color:red;
+    font-size: 20px;
+}
+
+#address{
+   width: 29%;
+   font-size: 14px;
+}
+
+#image{
+    padding: 18px;
+    border: 2px solid black;
+    width: 32%;
+    border-radius: 4px;
+}
+#role1{
+    padding: 15px;
+    font-size: 20px;
+    border: 2px solid black;
+    width:29%;
+    border-radius: 4px;
+}
+#role{
+    font-size: 17px
+}
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System</title>
+    <link rel="stylesheet" href="stylesheet/styleindex.css">
+</head>
+<body>
+    <div id="background">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+        <div class="shape shape4"></div>
+    </div>
+    <div id="header">
+        <h1>Online Voting System</h1>
+        <hr>
+    </div>
+    <div id="bodySection">
+        <form action="connection/login.php" method="POST" enctype="multipart/form-data">
+            <h3>Login</h3>
+            <input type="number" name="mobile" placeholder="Enter number" required>
+            <input type="password" name="password" placeholder="Enter password" required>
+            <select name="role" id="droupBOX">
+                <option value="1">Voter</option>
+                <option value="2">Group</option>
+            </select>
+            <button id="button" type="submit">Login</button>
+            <br><br>
+            New User? <a href="inside/registration.php">Register here</a>
+        </form>
+    </div>
+</body>
+</html>

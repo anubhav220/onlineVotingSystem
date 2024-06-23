@@ -1,0 +1,180 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.shape {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.shape1 { width: 150px; height: 150px; top: -50px; left: -50px; }
+.shape2 { width: 100px; height: 100px; bottom: -50px; right: -50px; }
+.shape3 { width: 75px; height: 75px; top: 50px; right: -25px; }
+.shape4 { width: 200px; height: 200px; bottom: -100px; left: -100px; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+#container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#header h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#header hr {
+    border: none;
+    border-top: 2px solid #007bff;
+    margin: 20px 0;
+}
+
+#bodySection {
+    margin-top: 20px;
+}
+
+#bodySection h3 {
+    margin-bottom: 20px;
+    color: #007bff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="password"],
+.form-group input[type="file"],
+.form-group select,
+#button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="file"]:focus,
+.form-group select:focus,
+#button:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#button:hover {
+    background-color: #0056b3;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-center a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    #container {
+        padding: 20px;
+    }
+
+    #header h1 {
+        font-size: 1.75rem;
+    }
+
+    #bodySection h3 {
+        font-size: 1.25rem;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="number"],
+    .form-group input[type="password"],
+    .form-group input[type="file"],
+    .form-group select,
+    #button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #header h1 {
+        font-size: 1.5rem;
+    }
+
+    #bodySection h3 {
+        font-size: 1rem;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="number"],
+    .form-group input[type="password"],
+    .form-group input[type="file"],
+    .form-group select,
+    #button {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    #button {
+        font-size: 0.75rem;
+    }
+}
